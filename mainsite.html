@@ -37,6 +37,7 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-v120">v1.2.0</a></li>
           <li class="nav-item"><a class="nav-link" href="#section-v111">v1.1.1</a></li>
         </ul>
       </div>
@@ -55,8 +56,8 @@
         </div>
       </div>
     </div>
-  </section> 
-  
+  </section>
+
   <!-- section -->
   <!-- Start About project Area -->
   <section class="site-section" id="section-about">
@@ -70,24 +71,26 @@
             <h2>About this <strong> Project</strong></h2>
           </div>
           <p class="lead">
-            Even if this website is written in HTML 5 and uses some of the most known technologies and frameworks for web development (Bootstrap, CSS, 
+            Even if this website is written in HTML 5 and uses some of the most known technologies and frameworks for
+            web development (Bootstrap, CSS,
             JavaScript), its main goal is to be implemented with a DevOps approach. </p>
           <p class="lead">
             Each website version listed below uses different DevOps tools - check them to find out more. </p>
-          
+
           <div class="row">
             <div class="col-6">
-              <a href="#section-v111" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Latest Version</a>
+              <a href="#section-v120" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Latest Version</a>
             </div>
             <div class="col-6">
-              <a href="https://github.com/anvaplus/portfolio" target="_blank" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Source code</a>
+              <a href="https://github.com/anvaplus/portfolio" target="_blank"
+                class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Source code</a>
             </div>
           </div>
 
         </div>
       </div>
 
-      <div class="row pt-5"> 
+      <div class="row pt-5">
         <div class="col-md-3 mb-3">
           <div class="section-heading">
             <h2>Used <strong>Tools</strong></h2>
@@ -140,15 +143,103 @@
   </section>
   <!-- End About project Area -->
 
+  <!-- Start Version 1.2.0 Area -->
+  <section class="site-section bg-light" id="section-v120">
+    <div class="container">
+      <div class="row">
+        <div class="section-heading text-center col-md-12">
+          <h2>Version 1.2.0 - <strong>"Docker is here"</strong></h2>
+        </div>
+      </div>
+
+
+      <div class="row m-1">
+        <div class="section-heading text-center col-md-12">
+          <p class="lead">
+            Starting with this release the portfolio webside will be deployed on Docker. In order to do this a Docker
+            Image is needed.
+            The web server used inside the docker container for running this static HTML website is Nginx.
+          </p>
+        </div>
+      </div>
+
+      <div class="row m-1">
+        <div class="section text-center col-md-12">
+          <p>First steep - <strong>Dockerfile</strong> </p>
+        </div>
+        <div class="text-justify">
+          <p>
+            Docker Images start from a base image. The base image (the Alpine version of Nginx in this case) should
+            include the platform dependencies required by the website.
+            This base image is defined as an instruction in the Dockerfile. Docker Images are built based on the
+            contents of a Dockerfile.
+            In this moment the Dockerfile is a list of two instructions that describe how to deploy the application.
+            The first line defines the base image. The second line copies the content of the current directory into a
+            particular location inside the container.
+          </p>
+        </div>
+
+
+        <div class="text-left bg-white border col-md-12">
+          <code>FROM nginx:alpine</code><br>
+          <code>COPY . /usr/share/nginx/html</code>
+        </div>
+      </div><br>
+
+      <div class="row m-1">
+        <div class="text-center col-md-12">
+          <p>Second steep - <strong>Build Docker Image</strong> </p>
+        </div>
+        <div class="text-justify">
+          <p>
+            The Dockerfile is used by the Docker CLI build command. The build command executes each instruction within
+            the
+            Dockerfile.
+            The result is Docker Image that can be launched to see the website. In order to bild this image the next
+            command is run it.
+            The resulted image will have the name portfolio-image with a tag of v1.2.0
+          </p>
+
+        </div>
+        <div class="text-left bg-white border col-md-12">
+          <code>docker build -t portfolio-image:v1.2.0 .</code>
+        </div>
+      </div><br>
+
+      <div class="row m-1">
+        <div class="text-center col-md-12">
+          <p>Last steep - <strong>Run</strong></p>
+        </div>
+        <div class="section text-justify">
+          <P>
+            In order to launch the builded image some network parameters must be provided.
+            For example, to open and bind to a network port on the host we need to provide the parameter -p
+            <code>&lt;host-port&gt;:&lt;container-port&gt;</code>.
+            Next command will launch the newly built image providing a friendly name and tag. As it's a web server,
+            bind port 80 to
+            the host using the -p parameter.
+            Once started, we'll be able to access the results of port 80 via localhost. Now we have a static HTML
+            website being served by Nginx.
+          </P>
+        </div>
+
+        <div class="text-left bg-white border col-md-12">
+          <code>docker run -d -p 80:80 portfolio-image:v1.2.0</code>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Version 1.2.0 Area -->
+
   <!-- Start Version 1.1.1 Area -->
-  <section class="site-section bg-light" id="section-v111">
+  <section class="site-section" id="section-v111">
     <div class="container">
       <div class="row">
         <div class="section-heading text-center col-md-12">
           <h2>Version 1.1.1 - <strong>"The Beginning"</strong></h2>
         </div>
       </div>
-      
+
       <div class="row">
         <div class="section-heading text-center col-md-12">
           <p class="lead">
