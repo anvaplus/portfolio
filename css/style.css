@@ -604,3 +604,23 @@ a {
   .block-47 .block-47-quote .block-47-quote-author {
     font-size: 14px;
     color: #666666; }
+
+/*--------- Start Video Player configuration -------------*/
+
+.container-video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video{
+  width: 100%;
+  height: auto;
+}
+.c-video{
+  width: 100%;
+  max-width: 400px;
+  
+}
+
+/*--------- End Video Player configuration -------------*/

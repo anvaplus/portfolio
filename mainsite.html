@@ -156,7 +156,7 @@
       <div class="row m-1">
         <div class="section-heading text-center col-md-12">
           <p class="lead">
-            Starting with this release the portfolio webside will be deployed on Docker. In order to do this a Docker
+            Starting with this release, the portfolio website will be deployed on Docker. In order to do this a Docker
             Image is needed.
             The web server used inside the docker container for running this static HTML website is Nginx.
           </p>
@@ -165,15 +165,15 @@
 
       <div class="row m-1">
         <div class="section text-center col-md-12">
-          <p>First steep - <strong>Dockerfile</strong> </p>
+          <p>Step 1 - <strong>Dockerfile</strong> </p>
         </div>
         <div class="text-justify">
           <p>
-            Docker Images start from a base image. The base image (the Alpine version of Nginx in this case) should
+            Docker Images start from a base image. The base image (in this case, the Alpine version of Nginx) should
             include the platform dependencies required by the website.
             This base image is defined as an instruction in the Dockerfile. Docker Images are built based on the
             contents of a Dockerfile.
-            In this moment the Dockerfile is a list of two instructions that describe how to deploy the application.
+            At this stage, the Dockerfile is a list of two instructions that describe how to deploy the application.
             The first line defines the base image. The second line copies the content of the current directory into a
             particular location inside the container.
           </p>
@@ -188,16 +188,13 @@
 
       <div class="row m-1">
         <div class="text-center col-md-12">
-          <p>Second steep - <strong>Build Docker Image</strong> </p>
+          <p>Step 2 - <strong>Build Docker Image</strong> </p>
         </div>
         <div class="text-justify">
           <p>
             The Dockerfile is used by the Docker CLI build command. The build command executes each instruction within
-            the
-            Dockerfile.
-            The result is Docker Image that can be launched to see the website. In order to bild this image the next
-            command is run it.
-            The resulted image will have the name portfolio-image with a tag of v1.2.0
+            the Dockerfile.
+            The resulting image will have the name portfolio-image with a <i>v1.2.0</i> tag, and can be launched to display the website.         
           </p>
 
         </div>
@@ -208,24 +205,38 @@
 
       <div class="row m-1">
         <div class="text-center col-md-12">
-          <p>Last steep - <strong>Run</strong></p>
+          <p>Step 3 - <strong>Run</strong></p>
         </div>
         <div class="section text-justify">
           <P>
-            In order to launch the builded image some network parameters must be provided.
-            For example, to open and bind to a network port on the host we need to provide the parameter -p
+            Some network parameters must be provided to launch the built image.
+            For example, to open and bind the image to a network port on the host we need to provide the parameter -p
             <code>&lt;host-port&gt;:&lt;container-port&gt;</code>.
-            Next command will launch the newly built image providing a friendly name and tag. As it's a web server,
-            bind port 80 to
+            The command below launches the newly built image with a user-friendly name and tag, and 
+            binds the image webserver port 80 to
             the host using the -p parameter.
-            Once started, we'll be able to access the results of port 80 via localhost. Now we have a static HTML
+            Once launched, we'll be able to access the results of port 80 via localhost. Now we have a static HTML
             website being served by Nginx.
           </P>
         </div>
 
         <div class="text-left bg-white border col-md-12">
-          <code>docker run -d -p 80:80 portfolio-image:v1.2.0</code>
+          <code>docker run --name demo_portfolio -d -p 80:80 portfolio-image:v1.2.0</code>
         </div>
+      </div><br><br>
+
+      <div class="row m-1">
+        <div class="section text-center col-md-12">
+          <p class="lead">
+            Video demo of steps 1-3. The created image is available on my Dockerhub page. Run static HTML website in Docker
+          </p>
+        </div>
+          <div class="img-responsive">
+            <video class="video" controls poster="images/portfolio/docker_video_poster.jpg">
+              <source src="video/portfolio/v120_docker_app.mp4" type="video/mp4">
+              <source src="video/portfolio/v120_docker_app.ogg" type="video/ogg">
+            </video>
+          </div>
       </div>
     </div>
   </section>
