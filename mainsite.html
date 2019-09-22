@@ -7,7 +7,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
   <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/flexslider.css">
@@ -17,9 +16,9 @@
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="stylesheet" href="css/fontawesome-5.8.2-web-all.css">
-
+  <link type="text/css" rel="stylesheet" href="lightGallery/src/css/lightgallery.css" /> 
+  <link type="text/css" rel="stylesheet" href="lightGallery/dist/css/lg-transitions.css" /> 
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
-
 
 </head>
 
@@ -310,6 +309,29 @@
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="js/custom.js"></script>
+
+
+
+  <!-- jQuery version must be >= 1.8.0; -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="lightGallery/dist/js/lightgallery.js"></script>
+  
+  <!-- A jQuery plugin that adds cross-browser mouse wheel support.-->
+  <script src="lightGallery/lib/jquery.mousewheel.min.js"></script>
+  
+  <!-- lightgallery plugins -->
+  <script src="lightGallery/modules/lg-thumbnail.min.js"></script>
+  <script src="lightGallery/modules/lg-fullscreen.min.js"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $("#vertical-slide").lightGallery({
+          mode: 'lg-slide-vertical'
+        }); 
+    });
+  </script>
 
   <!-- Google Map -->
   <script
