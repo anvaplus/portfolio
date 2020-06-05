@@ -170,6 +170,62 @@
           If all mandatory parameters are seated correctly, the resullt will be saved in <code>C:\Users\[username]\Documents\XmlBinaryConverter</code> folder, 
           or in selected folder defined with <code>-o</code> parameter.
         </p>
+
+        <div class="row m-1 col-md-12" >
+          <table class="table table-bordered table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Parameter</th>
+                <th scope="col">Description</th>
+                <th scope="col">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">-help</th>
+                <td>Show help option</td>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th scope="row">-xsd</th>
+                <td>Location of XSD file</td>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th scope="row">-xml</th>
+                <td>Location of XML file</td>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th scope="row">-xns</th>
+                <td>Namespace URI: (Ex. http://tempuri.org/Test.xsd)</td>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th scope="row">-xpx</th>
+                <td>XML namespace prefix</td>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th scope="row">-xen</th>
+                <td>XML main element name</td>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th scope="row">-o</th>
+                <td>Location of output files</td>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th scope="row">-it</th>
+                <td>Interactive Mode</td>
+                <td>Optional</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
       </div>
 
       <br>
@@ -194,8 +250,8 @@
         </div>
 
         <div class="media-gallery">
-          <ul class="no-bullets" id="CI_video_gallery">
-            <li class="video" data-src="https://youtu.be/cL3LqKqcxSE" data-sub-html="Descriere 1">
+          <ul class="no-bullets" id="video_gallery">
+            <li class="video" data-src="https://youtu.be/cL3LqKqcxSE" data-sub-html="XML Binary Converter Demo">
               <a href="">
                 <img class="img-responsive" src="images/portfolio/v130/az_pipeline_video_poster.jpg">
                 <div class="media-gallery-poster">
@@ -267,32 +323,7 @@
 
   <script type="text/javascript">
     $(document).ready(function () {
-
-      $('#v120_video_gallery').lightGallery({
-        youtubePlayerParams: {
-        modestbranding: 1,
-        rel: 0,
-        controls: 1
-        }
-      }); 
-
-      $("#CI_step1_gallery").lightGallery({
-        zoom: true,
-        width: '1800px',
-        height: '1000px',
-      });
-      $("#CI_step2_gallery").lightGallery({
-        zoom: true,
-        width: '1800px',
-        height: '1000px',
-      });
-      $("#CI_step3_gallery").lightGallery({
-        zoom: true,
-        width: '1800px',
-        height: '1000px',
-      });
-
-      $('#CI_video_gallery').lightGallery({
+      $('#video_gallery').lightGallery({
         youtubePlayerParams: {
         modestbranding: 1,
         rel: 0,
