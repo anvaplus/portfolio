@@ -42,13 +42,12 @@
     </div>
   </nav>
 
-  <section class="site-hero" style="background-image: url(images/jiraConfluence/jira_confluence_background.jpg);" id="section-home"
-    data-stellar-background-ratio="0.5">
+  <section class="site-hero" style="background-image: url(images/jiraConfluence/jira_confluence_background.jpg);"
+    id="section-home" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row intro-text align-items-center justify-content-center">
         <div class="col-md-10 text-center">
           <h1 class="site-heading site-animate"><strong>Jira/Confluence on docker</strong></h1>
-          <p class="lead site-subheading mb-4 site-animate">A simple console application that converts a XML file to binary.</p>
           <p><a href="#section-about" class="smoothscroll btn btn-primary px-4 py-3">See more</a></p>
         </div>
       </div>
@@ -68,14 +67,13 @@
             <h2>About this <strong> Project</strong></h2>
           </div>
           <p class="lead">
-            A simple console program written in .NET Core that verifies an XML file against an XSD schema. 
+            In this poject I'll show you how I setup my Jira and Confluence instances in a Docker container.
           </p>
           <p class="lead">
-            If verification succeeds, the XML file is binarized and a header file for C/C++ embedded software is created from the XSD schema. 
-            This header file is useed to access data from the binary file.
+            I designed ......
           </p>
           <p class="lead">
-            The program can be used in different modes, listed below - check them to find out more. 
+            Check bellow all steps.
           </p>
 
           <div class="row">
@@ -83,7 +81,7 @@
               <a href="#section-v100" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Latest Version</a>
             </div>
             <div class="col-6">
-              <a href="https://github.com/anvaplus/XmlBinaryConverter" target="_blank"
+              <a href="https://github.com/anvaplus/jira-confluence" target="_blank"
                 class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Source code</a>
             </div>
           </div>
@@ -99,31 +97,31 @@
         </div>
         <div class="col-md-9">
           <div class="skill">
-            <h3>.Net Core 3.1</h3>
+            <h3>Docker</h3>
             <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0"
                 aria-valuemax="100">
-                <span>90%</span>
+                <span>92%</span>
               </div>
             </div>
           </div>
 
           <div class="skill">
-            <h3>XML / XSD</h3>
+            <h3>Jira / Confluence</h3>
             <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 73%" aria-valuenow=73" aria-valuemin="0"
-                aria-valuemax="100">
-                <span>73%</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <h3>Azure DevOps</h3>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow=78" aria-valuemin="0"
                 aria-valuemax="100">
                 <span>78%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <h3>SQL Server</h3>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                aria-valuemax="100">
+                <span>80%</span>
               </div>
             </div>
           </div>
@@ -138,130 +136,136 @@
   <section class="site-section bg-light" id="section-v100">
     <div class="container">
       <div class="section-heading text-center">
-        <h2>Version 1.0.0 - <strong>"Interactive Console"</strong></h2>
-        <span class="date"><span class="icon-calendar"></span> Published on 19 June 2020</span>
+        <h2>Version 1.0.0 - <strong>"Dockerized Atlassian Jira"</strong></h2>
+        <span class="date"><span class="icon-calendar"></span> Published on XX July 2020</span>
       </div>
 
-      <div class="section-heading text-center">
-        <p class="lead">
-          This version of the program can be used in 3 modes.
-        </p>
-      </div>
-      
-      <div class="row m-1">
-        <div class="section text-center col-md-12">
-          <p class="lead">First Method - <strong>Q/A MODE</strong>.</p>
-        </div>
+      <div class="jira-db-conf">
+        <div class="row m-1">
+          <div class="section text-center col-md-12">
+            <p class="lead"><strong>Jira database configuration</strong></p>
+          </div>
 
-        <p class="text-justify">
-          The console can be launched without any parameters. When launched in this mode, the user must insert all data in the console, step by step, accordinq to the console questions (Q/A).
-          If all data is inserted correctly, the result (binary and header file) will be saved in <code>C:\Users\[username]\Documents\XmlBinaryConverter</code>.
-        </p>
-      </div>
-
-      <br>
-      <div class="row m-1">
-        <div class="section text-center col-md-12">
-          <p class="lead">Second Method - <strong>Background MODE</strong>.</p>
-        </div>
-
-        <p class="text-justify">
-          The programm can be launched in background using some parameters. When used in this mode, the console must be launched with the mandatory parameters.
-          If all mandatory parameters are seated correctly, the result will be saved in the <code>C:\Users\[username]\Documents\XmlBinaryConverter</code> folder, 
-          or in the selected folder defined with <code>-o</code> parameter.
-        </p>
-
-        <div class="row m-1 col-md-12" >
-          <table class="table table-bordered table-sm">
-            <thead>
-              <tr>
-                <th scope="col">Parameter</th>
-                <th scope="col">Description</th>
-                <th scope="col">Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">-help</th>
-                <td>Show help option</td>
-                <td>Optional</td>
-              </tr>
-              <tr>
-                <th scope="row">-xsd</th>
-                <td>Location of XSD file</td>
-                <td>Mandatory</td>
-              </tr>
-              <tr>
-                <th scope="row">-xml</th>
-                <td>Location of XML file</td>
-                <td>Mandatory</td>
-              </tr>
-              <tr>
-                <th scope="row">-xns</th>
-                <td>Namespace URI: (Ex. http://tempuri.org/Test.xsd)</td>
-                <td>Mandatory</td>
-              </tr>
-              <tr>
-                <th scope="row">-xpx</th>
-                <td>XML namespace prefix</td>
-                <td>Mandatory</td>
-              </tr>
-              <tr>
-                <th scope="row">-xen</th>
-                <td>XML main element name</td>
-                <td>Mandatory</td>
-              </tr>
-              <tr>
-                <th scope="row">-o</th>
-                <td>Location of output files</td>
-                <td>Optional</td>
-              </tr>
-              <tr>
-                <th scope="row">-it</th>
-                <td>Interactive Mode</td>
-                <td>Optional</td>
-              </tr>
-            </tbody>
-          </table>
-
-        </div>
-
-      </div>
-
-      <br>
-      <div class="row m-1">
-        <div class="section text-center col-md-12">
-          <p class="lead">Third Method - <strong>Interactive MODE</strong>.</p>
-        </div>
-
-        <p class="text-justify">
-          The console can be started in interactive mode using <code>-it</code> parameter. When launched in this mode, the console will start in <i>Background Mode</i> by searching 
-          for all mandatory parameters; if any of these parameters are not set, the console will switch to <i>Q/A Mode</i> and ask the user to insert the missing data.  
-          The result will be saved in <code>C:\Users\[username]\Documents\XmlBinaryConverter</code>, or in the defined folder if <code>-o</code> parameter was inserted.
-        </p>
-      </div>
-
-      <br>
-      <div class="row m-1">
-        <div class="section text-center col-md-12">
-          <p class="lead">
-            Video demo with all three methods (Q/A, Background, Interactive).
-          </p>
-        </div>
-
-        <div class="media-gallery">
-          <ul class="no-bullets" id="video_gallery">
-            <li class="video" data-src="https://youtu.be/CtVXYuwUotY" data-sub-html="XML Binary Converter Demo">
-              <a href="">
-                <img class="img-responsive" src="images/xmlBinaryConverter/PS_xmlBinaryConverter_poster.jpg">
-                <div class="media-gallery-poster">
-                  <img src="images/play-button.png">
-                </div>
-              </a>
-            </li>
+          <p class="text-justify">
+            Microsoft SQL Server is the chosed relational database management system used for this project.
+            In order to configure the database from the environment, avoiding the need to do so through the web startup
+            screen,
+            the following variables must be supplied:
+          <ul>
+            <li><code>ATL_JDBC_URL</code> - The database URL; this is database-specific.</li>
+            <li><code>ATL_JDBC_USER</code> - The database user to connect as.</li>
+            <li><code>ATL_JDBC_PASSWORD</code> - The password for the database user.</li>
+            <li><code>ATL_DB_DRIVER</code> - The JDBC driver class: <b><i>com.microsoft.sqlserver.jdbc.SQLServerDriver
+                </i></b>in our case</li>
+            <li><code>ATL_DB_TYPE</code> - The type of database: <b><i>mssql </i></b>in our case</li>
+            <li><code>ATL_DB_SCHEMA_NAME</code> - The schema name of the database (optionally).
           </ul>
+          </p>
+
+          <p class="text-justify">
+            The following <i>docker-compose</i> file spin up a docker continer with a SQL Server used to setup our
+            database.
+            How the volumes are the preferred mechanism for persisting data generated by and used by Docker containers,
+            the Jira data will be saved in <code>jira-data</code> volume.
+          </p>
+
+          <div class="row m-1 text-left bg-white border col-md-12">
+            <pre>
+
+  version: "3.7"
+  services: 
+      sql-server:
+          container_name: sql-server
+          image: mcr.microsoft.com/mssql/server:2017-latest
+          ports:
+              - "1433:1433"
+          environment: 
+              ACCEPT_EULA: "Y" 
+              SA_PASSWORD: "Password!_first"
+          volumes: 
+              - sql-data:/var/opt/mssql/data
+  volumes:
+      jira-data:</pre>
+          </div><br>
+
+          <p class="text-justify">
+            Once the SQL Server container is up and running, for security purposes we need change the SA password.
+            The SA account is a system administrator on the SQL Server instance that gets created during setup.
+            After creating your SQL Server container, the <i>SA_PASSWORD</i> environment variable you specified is
+            discoverable by running <code>echo $SA_PASSWORD </code>in the container. Change the SA password with the
+            following command:
+          </p>
+
+          <div class="row m-1 text-left bg-white border col-md-12">
+            <pre>
+
+    docker exec -it sql-server /opt/mssql-tools/bin/sqlcmd \
+                -S localhost -U SA -P "Password!_first \
+                -Q 'ALTER LOGIN SA WITH PASSWORD="Password!_new"'</pre>
+          </div>
+
+
+
         </div>
+
+        <p class="text-justify">Now we can configure the database for Jira. Open the SQL Server Management Studio and
+          run the next commands:</p>
+        <div class="row">
+          <div class="col-sm">
+            On master:
+            <pre class="text-left bg-white border">
+    CREATE DATABASE jiradb
+    GO
+  
+    CREATE LOGIN jiraUser
+    WITH PASSWORD = '[JiraPassword1!]'
+    GO
+  
+  
+            </pre>
+          </div>
+          <div class="col-sm">
+            On jiradb:
+            <pre class="text-left bg-white border">
+    CREATE USER jiraUser
+    FOR LOGIN jiraUser
+    GO
+    
+    EXEC sp_addrolemember N'db_owner' , N'jiraUser'
+    GO
+    
+    CREATE SCHEMA jiraschema
+    GO       </pre>
+          </div>
+        </div>
+
+        <br>
+        <div class="row m-1">
+          <div class="section text-center col-md-12">
+            <p class="lead">
+              Video demo - Setup Jira DB on SQL Server.
+            </p>
+          </div>
+
+          <div class="media-gallery">
+            <ul class="no-bullets" id="video_gallery">
+              <li class="video" data-src="https://youtu.be/CtVXYuwUotY" data-sub-html="XML Binary Converter Demo">
+                <a href="">
+                  <img class="img-responsive" src="images/xmlBinaryConverter/PS_xmlBinaryConverter_poster.jpg">
+                  <div class="media-gallery-poster">
+                    <img src="images/play-button.png">
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
+
+
+
+
 
     </div>
   </section>
@@ -325,11 +329,11 @@
     $(document).ready(function () {
       $('#video_gallery').lightGallery({
         youtubePlayerParams: {
-        modestbranding: 1,
-        rel: 0,
-        controls: 1
+          modestbranding: 1,
+          rel: 0,
+          controls: 1
         }
-      }); 
+      });
     });
   </script>
 
