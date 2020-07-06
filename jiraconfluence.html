@@ -60,9 +60,9 @@
     <div class="container">
       <div class="row mb-5 align-items-center">
         <div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-          <img src="images/xmlBinaryConverter/xmlbc_about.jpg" alt="Image placeholder" class="img-fluid">
+          <img src="images/jiraConfluence/jira_confluence_about.jpg" alt="Image placeholder" class="img-fluid">
         </div>
-        <div class="col-lg-5 pl-lg-5">
+        <div class="col-lg-5 pl-lg-5 text-justify">
           <div class="section-heading">
             <h2>About this <strong> Project</strong></h2>
           </div>
@@ -70,7 +70,8 @@
             In this poject I'll show you how I setup my Jira and Confluence instances in a Docker container.
           </p>
           <p class="lead">
-            I designed ......
+            In the first version I'll explain how you can configure Jira in a Docker container starting from the official image and how to setup the database for this. 
+            In the next versions I'll show you my personal setup for Jira and Confluence. The database used for this project is SQL Server.
           </p>
           <p class="lead">
             Check bellow all steps.
@@ -137,7 +138,7 @@
     <div class="container">
       <div class="section-heading text-center">
         <h2>Version 1.0.0 - <strong>"Dockerized Atlassian Jira"</strong></h2>
-        <span class="date"><span class="icon-calendar"></span> Published on XX July 2020</span>
+        <span class="date"><span class="icon-calendar"></span> Published on 06 July 2020</span>
       </div>
 
       <div class="jira-db-conf">
@@ -246,7 +247,7 @@
           </div>
 
           <div class="media-gallery">
-            <ul class="no-bullets" id="video_gallery">
+            <ul class="no-bullets" id="jira_dbconf_video_gallery">
               <li class="video" data-src="https://youtu.be/BvbccRSv9H0" data-sub-html="Setup Jira DB on SQL Server">
                 <a href="">
                   <img class="img-responsive" src="images/jiraConfluence/PS_jiraDbConfig_poster.jpg">
@@ -318,10 +319,10 @@
           </div>
 
           <div class="media-gallery">
-            <ul class="no-bullets" id="video_gallery">
-              <li class="video" data-src="https://youtu.be/CtVXYuwUotY" data-sub-html="XML Binary Converter Demo">
+            <ul class="no-bullets" id="jira_docker_video_gallery">
+              <li class="video" data-src="https://youtu.be/JcEpMRubhcU" data-sub-html="Jira on Docker">
                 <a href="">
-                  <img class="img-responsive" src="images/xmlBinaryConverter/PS_xmlBinaryConverter_poster.jpg">
+                  <img class="img-responsive" src="images/jiraConfluence/PS_jiraOnDocker_poster.jpg">
                   <div class="media-gallery-poster">
                     <img src="images/play-button.png">
                   </div>
@@ -394,7 +395,14 @@
 
   <script type="text/javascript">
     $(document).ready(function () {
-      $('#video_gallery').lightGallery({
+      $('#jira_dbconf_video_gallery').lightGallery({
+        youtubePlayerParams: {
+          modestbranding: 1,
+          rel: 0,
+          controls: 1
+        }
+      });
+      $('#jira_docker_video_gallery').lightGallery({
         youtubePlayerParams: {
           modestbranding: 1,
           rel: 0,
