@@ -772,3 +772,41 @@ a {
 
 /*--------- End lightGallery configuration -------------*/
 
+/*--------- Start Skill configuration -------------*/
+
+.tooltip-inner {
+  background-color: #57d131 !important;
+  color: #fff ;
+}
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+  border-top-color: #57d131 !important;
+}
+
+.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
+  border-right-color: #57d131 !important;
+}
+
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+  border-bottom-color: #57d131 !important;
+}
+
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  border-left-color: #57d131 !important;
+}
+
+.section-skill h3 {
+  position: relative;
+  font-weight: 200;
+  padding-top: 20px;
+  font-size: 20px; }
+  .section-skill h3:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 50px;
+    background: #57d131;
+    z-index: -1; }
+
+/*--------- End Skill configuration -------------*/
