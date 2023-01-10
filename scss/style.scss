@@ -433,7 +433,7 @@ a {
 	}
 }
 
-.single-portfolio {
+.single-projects {
 	margin-bottom: 50px;
 	display: block;
 
@@ -453,8 +453,8 @@ a {
 	}
 }
 
-/*--------- Start Portfolio Area -------------*/
-.portfolio-area {
+/*--------- Start My Website Area -------------*/
+.projects-area {
     .primary-btn {
         color: $white;
         background-color: $primary;
@@ -463,15 +463,15 @@ a {
     }
 }
 
-.portfolio-area .filters {
+.projects-area .filters {
     text-align: center;
 }
 
-.portfolio-area .filters ul {
+.projects-area .filters ul {
     padding: 0;
 }
 
-.portfolio-area .filters ul li {
+.projects-area .filters ul li {
     list-style: none;
     display: inline-block;
     padding: 18px 15px;
@@ -486,7 +486,7 @@ a {
     }
 }
 
-.portfolio-area .filters ul li:after {
+.projects-area .filters ul li:after {
     content: "";
     display: block;
     width: calc(0% - 60px);
@@ -496,52 +496,52 @@ a {
     transition: width 350ms ease-out;
 }
 
-.portfolio-area .filters ul li:hover:after {
+.projects-area .filters ul li:hover:after {
     width: calc(100% - 60px);
     transition: width 350ms ease-out;
 }
 
-.portfolio-area .filters ul li.active {
+.projects-area .filters ul li.active {
     color: $primary;
 }
 
-.portfolio-area .filters-content {
+.projects-area .filters-content {
     margin-top: 50px;
 }
 
-.portfolio-area .filters-content .show {
+.projects-area .filters-content .show {
     opacity: 1;
     visibility: visible;
     transition: all 350ms;
 }
 
-.portfolio-area .filters-content .hide {
+.projects-area .filters-content .hide {
     opacity: 0;
     visibility: hidden;
     transition: all 350ms;
 }
 
-.portfolio-area .filters-content .item {
+.projects-area .filters-content .item {
     text-align: center;
     cursor: pointer;
     margin-bottom: 30px;
 }
 
-.portfolio-area .filters-content .item img {
+.projects-area .filters-content .item img {
     border-radius: 10px;
 }
 
-.portfolio-area .filters-content  .p-inner {
+.projects-area .filters-content  .p-inner {
     padding: 20px 0px;
     text-align:center;
 }
 
 
-.portfolio-area .filters-content .item .p-inner .cat {
+.projects-area .filters-content .item .p-inner .cat {
     font-size: 13px;
 }
 
-.portfolio-area .filters-content .item img {
+.projects-area .filters-content .item img {
     width: 100%;
 }
 
@@ -567,7 +567,7 @@ a {
 }
 
 
-.single-portfolio:hover .middle {
+.single-projects:hover .middle {
   opacity: 1;
 }
 
@@ -577,7 +577,7 @@ a {
   padding: 16px 32px;
 }
 
-.single-portfolio{
+.single-projects{
     border-radius:5px;  
     &:hover{
         .thumb{
